@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja de Abono | Asesor</title>
+  
+  
+</head>
+<body>
+    <img src="../img/asesor/login-asesor.png" alt="Home asesor"   id="img-home-asesor">
+
+
+
+
+
+<script src="../js/app.js"></script>
+<script >
+
+        const imgHomeAsesor = document.querySelector('#img-home-asesor');
+       
+
+
+
+        imgHomeAsesor.addEventListener('click',()=>{
+            bc.postMessage('login Asesor');
+            bc.postMessage({redirectcliente:''});
+            window.location.href="bienvenida.html";
+            
+        })
+</script>
+</body>
+</html>

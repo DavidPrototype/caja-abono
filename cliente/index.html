@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Cliente</title>
+</head>
+<body>
+<img src="../img/cliente/bienvenida-cliente.png" alt="Home Cliente">
+<script src="../js/app.js"></script>
+<script>
+    bc.addEventListener('message',(event)=>{
+      
+
+        if(event.data.redirectcliente =='inicio-cliente'){
+            window.location.href="inicio.html";
+        }
+    })
+</script>
+</body>
+</html>

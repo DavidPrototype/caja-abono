@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | asesor</title>
+</head>
+<body>
+    <img src="../img/asesor/bienvenida.png" alt="Bievenida asesor" id="bienvenida-asesor">
+
+    <script src="../js/app.js"></script>
+    <script >
+
+        const bienvenidaAsesor = document.querySelector('#bienvenida-asesor');
+      
+
+
+
+        bienvenidaAsesor.addEventListener('click',()=>{
+            bc.postMessage('Bienvenida Asesor');
+            bc.postMessage({redirectcliente:'inicio-cliente'});
+
+            
+            window.location.href="inicio.html";
+            
+        })
+</script>
+</body>
+</html>

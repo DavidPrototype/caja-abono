@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     $('area#btn_acceso').on('click', function() {
 		// alert($(this).attr('alt') + ' clicked');
-        bc.postMessage({redirectcliente:'inicio-cliente'});
+        // bc.postMessage({redirectcliente:'inicio-cliente'});
+        window.postMessage({redirectcliente:'inicio-cliente'},'https://main--euphonious-sundae-27c876.netlify.app/');
         window.location.href="inicio.html";
 	});
 

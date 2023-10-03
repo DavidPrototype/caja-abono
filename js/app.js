@@ -1,1 +1,1 @@
-const bc = new BroadcastChannel('bc');
+var bc = new BroadcastChannel('bc');

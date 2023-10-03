@@ -3,25 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caja de Abonoi | Inicio Asesor</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Caja de Abono | Inicio Asesor</title>
 </head>
 <body>
-    <img src="../img/asesor/inicio-asesor.png" alt="Inicio asesor" id="ini-asesor">
+    <div>
+        <img 
+            src="../img/asesor/inicio-asesor.png" 
+            width="1024" 
+            height="728"
+            alt="Inicio asesor" 
+            id="ini-asesor"
+            usemap="#inicio-map"
+            >
 
+    </div>
+    
+   
+
+    <map name="inicio-map">
+        <area id="salir"  target="_self" alt="Boton Salir" title="Boton Salir" href="javascript:void(0);" coords="17,665,49,704" shape="rect">
+        <area id="accion_abono" target="_self" alt="Accion Abono" title="Accion Abono" href="javascript:void(0);" coords="98,548,234,683" shape="rect">
+        <area id="accion_prestamo" target="_self" alt="Accion  Prestamo" title="Accion  Prestamo" href="javascript:void(0);" coords="247,547,388,685" shape="rect">
+        <area id="accion_seguro" target="_self" alt="Accion Seguro" title="Accion Seguro" href="javascript:void(0);" coords="404,547,539,684" shape="rect">
+        <area id="prestamo_personal" target="_self" alt="Prestamo Personal" title="Prestamo Personal" href="javascript:void(0);" coords="742,237,1007,290" shape="rect">
+        <area id="menu_abonos" target="_self" alt="Menu Abonos" title="Menu Abonos" href="javascript:void(0);" coords="9,136,53,176" shape="rect">
+        <area id="menu_prestamo"  target="_self" alt="Menu Prestamo" title="Menu Prestamo" href="javascript:void(0);" coords="7,191,56,234" shape="rect">
+        <area id="menu_seguros" target="_self" alt="Menu Seguros" title="Menu Seguros" href="javascript:void(0);" coords="9,248,56,292" shape="rect">
+    </map>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../js/jquery.rwdImageMaps.min.js"></script>
     <script src="../js/app.js"></script>
+   
 <script >
-
-        const inicioAsesor = document.querySelector('#ini-asesor');
+document.addEventListener("DOMContentLoaded", () => {
+    
+    $('img[usemap]').rwdImageMaps();
+   
+    $('area#salir').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+        bc.postMessage({redirectcliente:''});
+        window.location.href="index.html";
+	});
+    
+    $('area#accion_abono').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+        // bc.postMessage({redirectcliente:'inicio-cliente'});
+        window.location.href="abono-1.html";
        
+	});
+    $('area#accion_prestamo').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+        // bc.postMessage({redirectcliente:'inicio-cliente'});
+       
+	});
+    $('area#accion_seguro').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+        // bc.postMessage({redirectcliente:'inicio-cliente'});
+       
+	});
+    $('area#prestamo_personal').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+        // bc.postMessage({redirectcliente:'inicio-cliente'});
+       
+	});
+    $('area#menu_abonos').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+        // bc.postMessage({redirectcliente:'inicio-cliente'});
+        window.location.href="abono-1.html";
+       
+	});
+   
+    $('area#menu_prestamo').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+        // bc.postMessage({redirectcliente:'inicio-cliente'});
+       
+	});
+    $('area#menu_seguros').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+        // bc.postMessage({redirectcliente:'inicio-cliente'});
+       
+	});
 
 
+ 
+     // const inicioAsesor = document.querySelector('#ini-asesor');    
 
-        inicioAsesor.addEventListener('click',()=>{
-            bc.postMessage('Inicio Asesor');
-            bc.postMessage({redirectcliente:'abono1-cliente'});
-            // window.location.href="abono-1.html";
+        // inicioAsesor.addEventListener('click',()=>{
+        //     bc.postMessage('Inicio Asesor');
+        //     bc.postMessage({redirectcliente:'abono1-cliente'});
+        //     // window.location.href="abono-1.html";
             
-        })
+        // })
+})
+       
 </script>
 </body>
 </html>

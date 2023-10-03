@@ -31,13 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
     
     $('img[usemap]').rwdImageMaps();
     $('area#salir').on('click', function() {
-		alert($(this).attr('alt') + ' clicked');
-        bc.postMessage({redirectcliente:''});
+		// alert($(this).attr('alt') + ' clicked');
+        // bc.postMessage({redirectcliente:''});
         window.location.href="index.html";
 	});
     
     $('area#btn_acceso').on('click', function() {
-		alert($(this).attr('alt') + ' clicked');
+		// alert($(this).attr('alt') + ' clicked');
         bc.postMessage({redirectcliente:'inicio-cliente'});
         window.location.href="inicio.html";
 	});

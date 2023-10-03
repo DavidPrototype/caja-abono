@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>Home | Cliente</title>
 </head>
 <body>
-<img src="../img/cliente/bienvenida-cliente.png" alt="Home Cliente">
+    <div>
+        <img src="../img/cliente/bienvenida-cliente.png" alt="Bienvenida Cliente">
+    </div>
+
+ 
+    
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="../js/jquery.rwdImageMaps.min.js"></script>
 <script src="../js/app.js"></script>
 <script>
-    bc.addEventListener('message',(event)=>{
-      
+
+document.addEventListener("DOMContentLoaded", () => {
+    $('img[usemap]').rwdImageMaps();
+
+    bc.addEventListener('message',(event)=>{      
 
         if(event.data.redirectcliente =='inicio-cliente'){
             window.location.href="inicio.html";
         }
+       
     })
+})
 </script>
 </body>
 </html>

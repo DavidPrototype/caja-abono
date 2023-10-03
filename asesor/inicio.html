@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
     
     $('area#accion_abono').on('click', function() {
-		alert($(this).attr('alt') + ' clicked');
-        // bc.postMessage({redirectcliente:'inicio-cliente'});
+		// alert($(this).attr('alt') + ' clicked');
+        bc.postMessage({redirectcliente:'abono1-cliente'});
         window.location.href="abono-1.html";
        
 	});
@@ -70,8 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
        
 	});
     $('area#menu_abonos').on('click', function() {
-		alert($(this).attr('alt') + ' clicked');
-        // bc.postMessage({redirectcliente:'inicio-cliente'});
+		// alert($(this).attr('alt') + ' clicked');
+        bc.postMessage({redirectcliente:'abono1-cliente'});
         window.location.href="abono-1.html";
        
 	});
@@ -87,16 +87,14 @@ document.addEventListener("DOMContentLoaded", () => {
        
 	});
 
+    bc.addEventListener('message',(event)=>{      
 
+        if(event.data.redirectAsesor =='abono1-asesor'){
+            window.location.href="abono-1.html";
+        }
+    })
  
-     // const inicioAsesor = document.querySelector('#ini-asesor');    
-
-        // inicioAsesor.addEventListener('click',()=>{
-        //     bc.postMessage('Inicio Asesor');
-        //     bc.postMessage({redirectcliente:'abono1-cliente'});
-        //     // window.location.href="abono-1.html";
-            
-        // })
+     
 })
        
 </script>

@@ -56,17 +56,28 @@
        
     });
     $('area#btn_si').on('click', function() {
-        alert($(this).attr('alt') + ' clicked');
-        // bc.postMessage({redirectcliente:'inicio-cliente'});
+        // alert($(this).attr('alt') + ' clicked');
+        bc.postMessage({redirectcliente:'inicio-pagina'});
         window.location.href="inicio.html";
        
     });
     $('area#btn_no').on('click', function() {
-        alert($(this).attr('alt') + ' clicked');
-        // bc.postMessage({redirectcliente:'inicio-cliente'});
+        // alert($(this).attr('alt') + ' clicked');
+        bc.postMessage({redirectcliente:'gracias-pagina'});
         window.location.href="bienvenida.html";
        
     });
+
+    bc.addEventListener('message',(event)=>{      
+
+    if(event.data.redirectAsesor =='bienvenida-pagina'){
+        window.location.href="bienvenida.html";
+    }
+    if(event.data.redirectAsesor =='inicio-pagina'){
+        window.location.href="inicio.html";
+    }
+
+})
     
     
     

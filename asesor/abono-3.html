@@ -57,13 +57,21 @@ $('area#salir').on('click', function() {
    
 });
 $('area#btn_editarAbono').on('click', function() {
-    alert($(this).attr('alt') + ' clicked');
-    // bc.postMessage({redirectcliente:'inicio-cliente'});
+    // alert($(this).attr('alt') + ' clicked');
+    bc.postMessage({redirectcliente:'regresar-abono'});
     window.location.href="abono-2.html";
    
 });
 
+bc.addEventListener('message',(event)=>{      
 
+if(event.data.redirectAsesor =='editarAbono'){
+    window.location.href="abono-2.html";
+}
+if(event.data.redirectAsesor =='abono4-asesor'){
+    window.location.href="abono-4.html";
+}
+})
 
  
 })

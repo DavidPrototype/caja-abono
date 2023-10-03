@@ -57,9 +57,9 @@ $('area#salir').on('click', function() {
    
 });
 $('area#btn_pago').on('click', function() {
-    alert($(this).attr('alt') + ' clicked');
+    // alert($(this).attr('alt') + ' clicked');
+    bc.postMessage({redirectcliente:'finalpago1-cliente'});
     window.location.href="abono-3.html";
-    // bc.postMessage({redirectcliente:'inicio-cliente'});
    
 });
 

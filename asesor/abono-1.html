@@ -64,11 +64,17 @@ document.addEventListener("DOMContentLoaded", () => {
        
 	});
     $('area#productos').on('click', function() {
-        alert($(this).attr('alt') + ' clicked');
+        // alert($(this).attr('alt') + ' clicked');
+        bc.postMessage({redirectcliente:'abono2-cliente'});
         window.location.href="abono-2.html";
     });
 
- 
+    bc.addEventListener('message',(event)=>{      
+
+        if(event.data.redirectAsesor =='abono2-asesor'){
+            window.location.href="abono-2.html";
+        }
+    })
      
 })
        

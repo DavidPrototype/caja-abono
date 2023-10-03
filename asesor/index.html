@@ -38,14 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
   
     $('img[usemap]').rwdImageMaps();
     $('area#huella').on('click', function() {
-		alert($(this).attr('alt') + ' clicked');
-        bc.postMessage({redirectcliente:''});
+		// alert($(this).attr('alt') + ' clicked');
+       
         window.location.href="bienvenida.html";
 	});
     
     $('area#btn_login').on('click', function() {
-		alert($(this).attr('alt') + ' clicked');
-        bc.postMessage({redirectcliente:''});
+		// alert($(this).attr('alt') + ' clicked');
+      
         window.location.href="bienvenida.html";
 	});
 

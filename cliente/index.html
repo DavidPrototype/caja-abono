@@ -21,21 +21,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     $('img[usemap]').rwdImageMaps();
 
-    // bc.addEventListener('message',(event)=>{      
+    bc.addEventListener('message',(event)=>{      
 
-    //     if(event.data.redirectcliente =='inicio-cliente'){
-    //         window.location.href="inicio.html";
-    //     }
-       
-    // })
-    window.addEventListener('message',(event)=>{
-
-        console.log(event);
-        console.log(event.data);
-        // if (event.origin !== "https://main--euphonious-sundae-27c876.netlify.app/") return;
         if(event.data.redirectcliente =='inicio-cliente'){
             window.location.href="inicio.html";
         }
+       
     })
 })
 </script>

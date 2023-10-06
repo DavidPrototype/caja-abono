@@ -55,8 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
        
 	});
     $('area#accion_prestamo').on('click', function() {
-		alert($(this).attr('alt') + ' clicked');
-        // bc.postMessage({redirectcliente:'inicio-cliente'});
+		// alert($(this).attr('alt') + ' clicked');
+        bc.postMessage({redirectcliente:'prestamo1-cliente'});
+        window.location.href="prestamo-1.html";
        
 	});
     $('area#accion_seguro').on('click', function() {

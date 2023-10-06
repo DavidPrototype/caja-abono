@@ -30,7 +30,7 @@
  
     <script>
     document.addEventListener("DOMContentLoaded", () => {
-        console.log(bc)
+       
         $('img[usemap]').rwdImageMaps();
         
         $('area#accion_abonar').on('click', function() {
@@ -53,6 +53,9 @@
 
             if(event.data.redirectcliente =='abono1-cliente'){
                 window.location.href="abono-1.html";
+            }
+            if(event.data.redirectcliente =='prestamo1-cliente'){
+                window.location.href="prestamo-1.html";
             }
         })
     

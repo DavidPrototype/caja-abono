@@ -43,19 +43,20 @@ document.addEventListener("DOMContentLoaded", () => {
    
     $('area#menu_inicio').on('click', function() {
 		// alert($(this).attr('alt') + ' clicked');
-        // bc.postMessage({redirectcliente:''});
+        bc.postMessage({redirectcliente:'inicio-cliente'});
         window.location.href="inicio.html";
 	});
     
     $('area#menu_abonos').on('click', function() {
 		// alert($(this).attr('alt') + ' clicked');
-        // bc.postMessage({redirectcliente:'inicio-cliente'});
+        bc.postMessage({redirectcliente:'abonos1-cliente'});
         window.location.href="abono-1.html";
        
 	});
     $('area#menu_seguros').on('click', function() {
-		alert($(this).attr('alt') + ' clicked');
-        // bc.postMessage({redirectcliente:'inicio-cliente'});
+		// alert($(this).attr('alt') + ' clicked');
+        bc.postMessage({redirectcliente:'seguros1-cliente'});
+        window.location.href="seguros-1.html";
        
 	});
     $('area#salir').on('click', function() {

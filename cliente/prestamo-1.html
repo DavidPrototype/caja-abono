@@ -31,6 +31,16 @@ document.addEventListener("DOMContentLoaded", () => {
     
     bc.addEventListener('message',(event)=>{      
 
+        if(event.data.redirectcliente =='inicio-cliente'){
+            window.location.href="inicio.html";
+        }
+        
+        if(event.data.redirectcliente =='abono1-cliente'){
+            window.location.href="abono-1.html";
+        }
+        if(event.data.redirectcliente =='seguros1-cliente'){
+                window.location.href="seguros-1.html";
+        }
         if(event.data.redirectcliente =='prestamo1-cliente'){
             window.location.href="prestamo-1.html";
         }

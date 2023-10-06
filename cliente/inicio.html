@@ -39,14 +39,14 @@
             window.location.href="abono-1.html";
 	    });
         $('area#accion_prestamo').on('click', function() {
-            alert($(this).attr('alt') + ' clicked');
-           
-            // window.location.href="index.html";
+            // alert($(this).attr('alt') + ' clicked');
+            bc.postMessage({redirectAsesor:'prestamo1-asesor'});
+            window.location.href="prestamo-1.html";
 	    });
         $('area#accion_seguro').on('click', function() {
-            alert($(this).attr('alt') + ' clicked');
-           
-            // window.location.href="index.html";
+            // alert($(this).attr('alt') + ' clicked');
+            bc.postMessage({redirectAsesor:'seguros1-asesor'});
+            window.location.href="seguros-1.html";
 	    });
         
         bc.addEventListener('message',(event)=>{      
@@ -56,6 +56,12 @@
             }
             if(event.data.redirectcliente =='prestamo1-cliente'){
                 window.location.href="prestamo-1.html";
+            }
+            if(event.data.redirectcliente =='seguros1-cliente'){
+                window.location.href="seguros-1.html";
+            }
+            if(event.data.redirectcliente =='salir-cliente'){
+                window.location.href="gracias.html";
             }
         })
     

@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
     $('img[usemap]').rwdImageMaps();
    
     $('area#salir').on('click', function() {
-		alert($(this).attr('alt') + ' clicked');
-        bc.postMessage({redirectcliente:''});
+		// alert($(this).attr('alt') + ' clicked');
+        bc.postMessage({redirectcliente:'salir-cliente'});
         window.location.href="index.html";
 	});
     
@@ -61,13 +61,15 @@ document.addEventListener("DOMContentLoaded", () => {
        
 	});
     $('area#accion_seguro').on('click', function() {
-		alert($(this).attr('alt') + ' clicked');
-        // bc.postMessage({redirectcliente:'inicio-cliente'});
+		// alert($(this).attr('alt') + ' clicked');
+        bc.postMessage({redirectcliente:'seguros1-cliente'});
+        window.location.href="seguros-1.html";
        
 	});
     $('area#prestamo_personal').on('click', function() {
-		alert($(this).attr('alt') + ' clicked');
-        // bc.postMessage({redirectcliente:'inicio-cliente'});
+		// alert($(this).attr('alt') + ' clicked');
+        bc.postMessage({redirectcliente:'prestamo1-cliente'});
+        window.location.href="prestamo-1.html";
        
 	});
     $('area#menu_abonos').on('click', function() {
@@ -78,20 +80,27 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
    
     $('area#menu_prestamo').on('click', function() {
-		alert($(this).attr('alt') + ' clicked');
-        // bc.postMessage({redirectcliente:'inicio-cliente'});
+		// alert($(this).attr('alt') + ' clicked');
+        bc.postMessage({redirectcliente:'prestamo1-cliente'});
+        window.location.href="prestamo-1.html";
        
 	});
     $('area#menu_seguros').on('click', function() {
-		alert($(this).attr('alt') + ' clicked');
-        // bc.postMessage({redirectcliente:'inicio-cliente'});
-       
+		// alert($(this).attr('alt') + ' clicked');
+        bc.postMessage({redirectcliente:'seguros1-cliente'});
+        window.location.href="seguros-1.html";
 	});
 
     bc.addEventListener('message',(event)=>{      
 
         if(event.data.redirectAsesor =='abono1-asesor'){
             window.location.href="abono-1.html";
+        }
+        if(event.data.redirectAsesor =='prestamo1-asesor'){
+            window.location.href="prestamo-1.html";
+        }
+        if(event.data.redirectAsesor =='seguros1-asesor'){
+            window.location.href="seguros-1.html";
         }
     })
  

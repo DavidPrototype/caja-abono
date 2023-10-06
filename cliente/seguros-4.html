@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $('area#btn_no_operacion').on('click', function() {
 		// alert($(this).attr('alt') + ' clicked');
         bc.postMessage({redirectAsesor:'bienvenida-asesor'});
-        window.location.href="index.html";
+        window.location.href="gracias.html";
 	});
    
     
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href="prestamo-1.html";
         }
         if(event.data.redirectcliente =='gracias-cliente'){
-            window.location.href="index.html";
+            window.location.href="gracias.html";
         }
         
         if(event.data.redirectcliente =='salir-cliente'){

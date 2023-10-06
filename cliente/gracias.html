@@ -24,6 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     bc.addEventListener('message',(event)=>{      
 
+        if(event.data.redirectcliente =='bienvenida-cliente'){
+            window.location.href="index.html";
+        }
         if(event.data.redirectcliente =='inicio-cliente'){
             window.location.href="inicio.html";
         }
